@@ -43,9 +43,9 @@ const Login = () => {
         h-full object-cover"
           />
           <div className="absolute flex flex-col justify-center items-center top-0 bottom-0 left-0 right-0 bg-blackOverlay">
-            <div className="p-5">
+            <div className="p-5 ">
               <img src={logo} width="130px" alt="logo" />
-              <div className="shadow-2xl">
+              <div className="shadow-2xl pt-4">
                 <GoogleLogin
                   onSuccess={(response) => createOrGetUser(response)}
                   onError={() => console.log("Error")}

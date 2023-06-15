@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { useParams, useNavigate } from "react-router-dom";
 import {
   userCreatedPinsQuery,
@@ -10,6 +9,8 @@ import { client } from "../client";
 import MasonryLayout from "./MasonryLayout";
 import Spinner from "./Spinner";
 import { googleLogout } from "@react-oauth/google";
+import { FcGoogle } from "react-icons/fc";
+
 const activeBtnStyles =
   "bg-red-500 text-white font-bold p-2 rounded-full w-20 outline-none";
 const notActiveBtnStyles =
@@ -78,51 +79,31 @@ const UserProfile = () => {
             {user.userName}
           </h1>
           <div className="absolute top-0 z-1 right-0 p-2">
-            {userId === User.googleId && (
+            {userId === User.sub && (
               <googleLogout
-                clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
-                buttonText="Logout"
-                onLogoutSuccess={logout}
-              ></googleLogout>
+                clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
+              >
+                <button
+                  type="button"
+                  class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  onClick={logout}
+                >
+                  <FcGoogle /> Log Out
+                </button>
+              </googleLogout>
             )}
           </div>
-        </div>
-        <div className="text-center mb-7">
-          <button
-            type="button"
-            onClick={(e) => {
-              setText(e.target.textContent);
-              setActiveBtn("created");
-            }}
-            className={`${
-              activeBtn === "created" ? activeBtnStyles : notActiveBtnStyles
-            }`}
-          >
-            Created
-          </button>
-          <button
-            type="button"
-            onClick={(e) => {
-              setText(e.target.textContent);
-              setActiveBtn("saved");
-            }}
-            className={`${
-              activeBtn === "saved" ? activeBtnStyles : notActiveBtnStyles
-            }`}
-          >
-            Saved
-          </button>
-        </div>
 
-        <div className="px-2">
-          <MasonryLayout pins={pins} />
-        </div>
-
-        {pins?.length === 0 && (
-          <div className="flex justify-center font-bold items-center w-full text-1xl mt-2">
-            No Pins Found!
+          <div className="px-2">
+            <MasonryLayout pins={pins} />
           </div>
-        )}
+
+          {pins?.length === 0 && (
+            <div className="flex justify-center font-bold items-center w-full text-1xl mt-2">
+              No Pins Found!
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
