@@ -9,8 +9,7 @@ import { GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
   const navigate = useNavigate();
-  const credentialReponse = (response) => {
-    console.log(credentialReponse);
+  const responseGoogle = (response) => {
     localStorage.setItem("user", JSON.stringify(response.profileObj));
     const { name, googleId, imageUrl } = response.profileObj;
     const doc = {
@@ -44,7 +43,7 @@ const Login = () => {
             <img src={logo} width="130px" alt="logo" />
             <div className="shadow-2xl">
               <GoogleOAuthProvider
-                client_Id={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
+                clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
               >
                 render=
                 {(renderProps) => (
@@ -59,10 +58,10 @@ const Login = () => {
                 )}
                 <div className="GoogleLogin">
                   <GoogleLogin
-                    onSuccess={(credentialResponse) => {
-                      console.log(credentialResponse);
+                    onSuccess={(responseGoogle) => {
+                      console.log(responseGoogle);
                     }}
-                    onError={() => {
+                    onFailure={(responseGoogle) => {
                       console.log("Login Failed");
                     }}
                   />
