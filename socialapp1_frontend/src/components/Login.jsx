@@ -51,13 +51,6 @@ const Login = () => {
                   onError={() => console.log("Error")}
                   cookiePolicy="single_host_origin"
                 />
-
-                {/* {user ? (<div>Logged In</div>)
-                                : <GoogleLogin
-                                    onSuccess={(response) => createOrGetuser(response)}
-                                    onError={() => console.log('Error')}
-                                />
-                            } */}
               </div>
             </div>
           </div>

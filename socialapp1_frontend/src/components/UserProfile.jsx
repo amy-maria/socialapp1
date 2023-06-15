@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineLogout } from "react-icons/ai";
+
 import { useParams, useNavigate } from "react-router-dom";
 import {
   userCreatedPinsQuery,
@@ -9,7 +9,7 @@ import {
 import { client } from "../client";
 import MasonryLayout from "./MasonryLayout";
 import Spinner from "./Spinner";
-
+import { googleLogout } from "@react-oauth/google";
 const activeBtnStyles =
   "bg-red-500 text-white font-bold p-2 rounded-full w-20 outline-none";
 const notActiveBtnStyles =
@@ -53,7 +53,6 @@ const UserProfile = () => {
 
   const logout = () => {
     localStorage.clear();
-
     navigate("/login");
   };
 
@@ -80,21 +79,11 @@ const UserProfile = () => {
           </h1>
           <div className="absolute top-0 z-1 right-0 p-2">
             {userId === User.googleId && (
-              <GoogleLogout
-                clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
-                render={(renderProps) => (
-                  <button
-                    type="button"
-                    className=" bg-white p-2 rounded-full cursor-pointer outline-none shadow-md"
-                    onClick={renderProps.onClick}
-                    disabled={renderProps.disabled}
-                  >
-                    <AiOutlineLogout color="red" fontSize={21} />
-                  </button>
-                )}
+              <googleLogout
+                clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                buttonText="Logout"
                 onLogoutSuccess={logout}
-                cookiePolicy="single_host_origin"
-              />
+              ></googleLogout>
             )}
           </div>
         </div>
