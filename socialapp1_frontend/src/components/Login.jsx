@@ -5,10 +5,12 @@ import { FaGoogle } from "react-icons/fa";
 import logo from "../assets/logowhite.png";
 import shareVideo from "../assets/share.mp4";
 import { client } from "../client";
+import { GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
   const navigate = useNavigate();
-  const responseGoogle = (response) => {
+  const credentialReponse = (response) => {
+    console.log(credentialReponse);
     localStorage.setItem("user", JSON.stringify(response.profileObj));
     const { name, googleId, imageUrl } = response.profileObj;
     const doc = {
@@ -40,25 +42,32 @@ const Login = () => {
         <div className="absolute flex flex-col justify-center items-center top-0 bottom-0 left-0 right-0 bg-blackOverlay">
           <div className="p-5">
             <img src={logo} width="130px" alt="logo" />
-
             <div className="shadow-2xl">
               <GoogleOAuthProvider
-                clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
-                render={(renderProps) => (
+                client_Id={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
+              >
+                render=
+                {(renderProps) => (
                   <button
                     type="button"
                     className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none"
                     onClick={renderProps.onClick}
                     disabled={renderProps.disabled}
                   >
-                    <FaGoogle />
                     Sign in with Google
                   </button>
                 )}
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                cookiePolicy="single_host_origin"
-              ></GoogleOAuthProvider>
+                <div className="GoogleLogin">
+                  <GoogleLogin
+                    onSuccess={(credentialResponse) => {
+                      console.log(credentialResponse);
+                    }}
+                    onError={() => {
+                      console.log("Login Failed");
+                    }}
+                  />
+                </div>
+              </GoogleOAuthProvider>
             </div>
           </div>
         </div>
