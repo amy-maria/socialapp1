@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+Build Modern UI/UX Websites
+With all advanced Social Media features, such as Google Authentication, create, edit, delete and save posts, like and comment on other people's posts, search and filter images and much more, ShareMe is the best Image Sharing Social Media App that you can currently find on YouTube and on the entire internet.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You'll also learn how to work with Sanity. Sanity.io is the platform for structured content. It allows you to manage text, images, and all other data using APIs.
 
-## Available Scripts
+💻JS Mastery Pro - https://jsmastery.pro?discount=youtube
+✅ A special YOUTUBE discount code is automatically applied!
 
-In the project directory, you can run:
+Build even more comprehensive, modern applications such as an AI-Powered Movie App and an NFT Marketplace application. Become a professional developer today - https://www.jsmastery.pro 🔥
 
-### `npm start`
+⭐Sanity JSM Subscribers Special - https://www.sanity.io/javascriptmastery
+⭐Sanity - https://www.sanity.io
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This video may contain code snippets or concepts specific to a previous version of Sanity Studio. In most cases, you can find the information needed to adapt the material to the latest Studio version by exploring Sanity docs: https://www.sanity.io/docs/migrating-...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📚 Materials/References:
+GitHub Code (give it a star ⭐): https://github.com/adrianhajdin/proje...
+Styles & Other Code: https://gist.github.com/adrianhajdin/...
+Assets: https://minhaskamal.github.io/DownGit...
+Google Console - https://www.console.cloud.google.com
+Tailwind: https://tailwindcss.com/docs/guides/c...
 
-### `npm test`
+In this video, you'll learn advanced #ReactJS Best Practices, Google Authentication, #Tailwind CSS, and most importantly, you'll learn how to manage the content of your entire app using Sanity.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📧 Join our exclusive JavaScript Mastery Newsletter on Web Development, JavaScript & React to get complete programming guides, tips & tricks, and entire e-books: https://resource.jsmastery.pro/newsle... 🔥
 
-### `npm run build`
+🌐 My personal recommendation for hosting services: https://www.hostinger.com/javascriptm...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+💻 Master JavaScript: https://www.completepathtojavascriptm...
+Use the special promo code "YOUTUBE" on checkout to save $60!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+❤️ Support JavaScript Mastery & Suggest Future Videos:
+BuyMeACoffe: https://www.buymeacoffee.com/JSMastery
+Patreon: https://www.patreon.com/javascriptmas...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🌎 Find Me Here:
+Discord: https://discord.gg/n6EdbFJ
+Instagram: https://instagram.com/javascriptmastery
+Twitter: https://twitter.com/jsmasterypro
 
-### `npm run eject`
+💼 Business Inquiries:
+E-mail: javascriptmastery00@gmail.com
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Time Stamps 👇
+00:00 Intro
+00:04:43 Project Setup
+00:24:28 Frontend Setup
+00:39:58 Auth - Login/Register
+01:08:26 Home, Sidebar & Navbar
+01:59:16 Feed View
+02:24:30 Pin Component
+02:58:34 Create Pin
+03:30:18 Pin Details
+04:02:13 User Profile
+04:20:17 Search & Categories
+04:30:52 Deployment
